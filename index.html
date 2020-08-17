@@ -10,13 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
+<!-- modal  -->
+<div class='modal' id='resume-modal'>
+    <div class="modal-content-container">
+        <span class='close' id='close'>&times;</span>
+        <embed class='modal-content' id='resume' src="assets/Resume.pdf" type="application/pdf">
+            <div id='resumeCaption'></div>
+    </div>
+</div>
 
 <body>
     <header>
         <nav>
             <ul class="nav-links">
                 <li><a class=nav-link href="#">about</a></li>
-                <li><a class=nav-link href="#">resume</a></li>
+                <li><a class=nav-link id ="resumeButton">resume</a></li>
                 <li><a class=nav-link href="#">contact</a></li>
             </ul>
         </nav>
@@ -24,33 +32,33 @@
     </header>
     <div class="headContent">
         <h1>Nikkos Rose</h1>
-
         <img src="./img/me.jpg" alt="">
-
     </div>
-    
 
-    <main>
-        <section class="presentation">
-            <div class="about">
-                <h2>.about me</h2>
-                <p>Ad irure fugiat eu non culpa est quis fugiat. Qui labore commodo cupidatat labore. Velit excepteur
-                    nostrud eiusmod sint non. Dolore elit laborum occaecat aute do aliqua dolor mollit ad ipsum tempor
-                    commodo. Lorem commodo sint culpa sunt cillum qui fugiat non excepteur aliqua adipisicing sint
-                    irure. Do sit ea sunt elit. Incididunt culpa consectetur aliqua reprehenderit officia nulla ad
-                    reprehenderit dolor commodo ullamco.</p>
-            </div>
-            <div class="my-work">
-                <h3>.my-work</h3>
-                <p>streetwearConnect</p>
-                <img src="./img/streetwearConnect.png" alt="">
-                <p>streetwearConnect was my first full-scale project that I had personally designed and built with a team.
-                    Used to locate popular "streetwear" brands, I use an API to navigate through an overworld map through the use
-                    of buttons. Pitched to investors as well as family and friends.
-                </p>
-            </div>
-        </section>
-    </main>
+
+    <div class="mainContent">
+        <div class="about">
+            <h2>.about me</h2>
+            <p id="aboutText">Ad irure fugiat eu non culpa est quis fugiat. Qui labore commodo cupidatat labore. Velit
+                excepteur
+                nostrud eiusmod sint non. Dolore elit laborum occaecat aute do aliqua dolor mollit ad ipsum tempor
+                commodo. Lorem commodo sint culpa sunt cillum qui fugiat non excepteur aliqua adipisicing sint
+                irure. Do sit ea sunt elit. Incididunt culpa consectetur aliqua reprehenderit officia nulla ad
+                reprehenderit dolor commodo ullamco.</p>
+        </div>
+        <div class="my-work">
+            <h2>.my-work</h2>
+            <p>streetwearConnect</p>
+            <img src="./img/streetwearConnect.png" alt="">
+            <p>streetwearConnect was my first full-scale project that I had personally designed and built with a team.
+                Used to locate popular "streetwear" brands, I use an API to navigate through an overworld map through
+                the
+                use
+                of buttons. Pitched to investors as well as family and friends.
+            </p>
+        </div>
+    </div>
+
 
 
     <script src="lib/particles/particles.js" type="text/javascript"></script>

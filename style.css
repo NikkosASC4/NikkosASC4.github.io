@@ -89,7 +89,9 @@ header {
     text-decoration: none;
     color: rgb(240, 240, 240);
 }
-
+#resumeButton{
+    cursor: pointer;
+}
 
 nav{
     flex: 2;

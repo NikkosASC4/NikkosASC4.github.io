@@ -1,0 +1,39 @@
+name: portfolio-website
+on:
+  push:
+    branches: 
+      - main
+  pull_request: 
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Files
+        uses: actions/checkout@v7
+      - name: Setup DOTNET
+        uses: actions/setup-dotnet@v6
+        with: 
+          dotnet-version: 10.0.x
+      - name: Publish files
+        run: dotnet publish src/Portfolio -c Release -o release
+      - name: Copy index to 404 
+        run: cp release/wwwroot/index.html release/wwwroot/404.html
+      - name: Upload
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: release/wwwroot
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment: github-pages
+    steps:
+      - name: Deploy page
+        id: deployment
+        uses: actions/deploy-pages@v4

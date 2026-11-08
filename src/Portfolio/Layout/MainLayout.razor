@@ -1,16 +1,16 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+
+<div class="page" id="top">
+    <header class="site-header">
+        <a class="brand" href="#top">Nikkos Rose</a>
+        <nav class="site-nav">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#links">Links</a>
+        </nav>
+    </header>
 
     <main>
-        <div class="top-row px-4">
-            
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
+        @Body
     </main>
 </div>
